@@ -3,8 +3,22 @@
     
 }*/
 
+var played = false;
+
+var vid = document.getElementById("myVideo"); 
+
+function playVid() { 
+    document.getElementById("never").style.display="none";
+    document.getElementById("vidDiv").style.display="block";
+    document.getElementById("cyberbutton").style.display = "none";
+    document.getElementById("myVideo").scrollIntoView();
+    document.getElementById("myVideo").play();
+    played = true;
+} 
+
 document.onclick= function(event) {
-    document.getElementById("myAudio").play();
+    if(!played) document.getElementById("myAudio").play();
+    played = true;
 }
 
 /*window.onload = function() {
